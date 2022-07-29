@@ -20,21 +20,16 @@ export default function Content( props ) {
                 <TouchableOpacity onPress={()=> {props.acao.navigate("CodebarScreen")}} style={format.btn}>
                     <Image source={require("../../../../assets/barcode.png")} style={format.imgbtn} />
                     <Text style={format.txtbtn}>Código de Barras</Text>
-                </TouchableOpacity>  
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={()=> {props.acao.navigate("MapScreen")}} style={format.btn}>
+                    <Image source={require("../../../../assets/map.png")} style={format.imgbtn} />
+                    <Text style={format.txtbtn}>Mapa</Text>
+                </TouchableOpacity>
+
             </View>
 
         </View>
     )
 }
 
-function camera(){
-    Alert.alert("Camera","Você vai tirar uma pic",)
-}
-
-function galeria(){
-    Alert.alert("Galeria","Você vai acessar suas pics",)
-}
-
-function barcode(){
-    Alert.alert("Barcode","Você vai escanear algo",)
-}

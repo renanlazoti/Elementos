@@ -25,18 +25,18 @@ export default function CameraScreen(){
     return(
 
         <View style={{flex: 1}}>
-                    <Camera style={camerastyle.camera} type={type}>
-                        <View style={camerastyle.buttonContainer}>
-                        <TouchableOpacity
-                            style={camerastyle.button}
-                            onPress={() => {
+            <Camera style={camerastyle.camera} type={type}>
+                <View style={camerastyle.buttonContainer}>
+                  <TouchableOpacity
+                    style={camerastyle.button}
+                      onPress={() => {
                             setType(type === CameraType.back ? CameraType.front : CameraType.back);
-                            }}>
-                            <Text style={camerastyle.text}> Flip </Text>
-                        </TouchableOpacity>
-                        </View>
-                    </Camera>
-                </View>       
+                      }}>
+                      <Text style={camerastyle.text}> Flip </Text>
+                  </TouchableOpacity>
+                </View>
+            </Camera>
+        </View>       
 
     );
 }
